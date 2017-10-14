@@ -6,44 +6,76 @@
     android:layout_height="match_parent"
     tools:context="com.example.comquimes.myapplicationd.MainActivity">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
+        android:id="@+id/RL_INFO"
         android:layout_width="368dp"
         android:layout_height="495dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
         tools:context="com.androidmorefast.pc.appobtenergps.MainActivity"
-        tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
 
-            <TextView
-                android:id="@+id/mensaje_id"
+
+            <ImageView
+                android:id="@+id/iv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="3"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
             <TextView
-                android:id="@+id/mensaje_id2"
+                android:id="@+id/txtinfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/txt_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <com.google.android.gms.maps.MapView
-                android:id="@+id/mView2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
-    </RelativeLayout> app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_DISTANCE"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.androidmorefast.pc.appobtenergps.MainActivity"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/TV_DISTANCIA"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
