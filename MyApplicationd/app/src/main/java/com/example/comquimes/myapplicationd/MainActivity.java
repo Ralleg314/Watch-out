@@ -149,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
                 mNotifyMgr.notify(notification.getID(),notification.getmBuilder().build());
             } else {
                 mensaje3.setText("Estas a " + Double.toString(Math.round(distancia) ) + " metros del punt d'interes");
+                notification.changeOnGoing();
+                mNotifyMgr.cancel(notification.getID());
             }
         }
 
