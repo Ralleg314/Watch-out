@@ -18,7 +18,8 @@ public class Notification {
                 //.setSmallIcon(android.R.drawable.ic_notification_clear_all)
                 .setSmallIcon(R.drawable.upc)
                 .setContentTitle("Watch Out")
-                .setContentText("Estas muy cerca de un punto de interes!") ;
+                .setContentText("Estas muy cerca de un punto de interes!")
+                .setOngoing(true);
 
         Intent resultIntent = new Intent(mainActivity,mainActivity.getClass());
 

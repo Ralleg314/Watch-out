@@ -38,11 +38,9 @@
                 android:layout_height="wrap_content" />
 
             <com.google.android.gms.maps.MapView
-                android:id="@+id/mView"
+                android:id="@+id/mView2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:apiKey="AIzaSyChcW52zzMqYhFoSzV2uNTMEZsiAM1wUHM"/>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
