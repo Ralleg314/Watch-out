@@ -30,4 +30,10 @@ public class Notification {
     public int getID(){return mNotificationID;}
 
     public NotificationCompat.Builder getmBuilder() {return mBuilder;}
+
+    public void changeOnGoing(){
+            this.mBuilder.setOngoing(false);
+
+    }
+
 }
