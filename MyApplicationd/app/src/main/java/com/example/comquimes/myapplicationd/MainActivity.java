@@ -2,7 +2,6 @@ package com.example.comquimes.myapplicationd;
 
 import android.Manifest;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,13 +15,8 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.widget.TextView;
-
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
 
 import java.io.IOException;
 import java.util.List;
@@ -34,26 +28,7 @@ public class MainActivity extends AppCompatActivity {
     TextView mensaje3;
     NotificationManager mNotifyMgr;
     Notification notification;
-    /*MapView mView;
-    GoogleMap googleMap;
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-//        mView.onResume();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mView.onDestroy();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mView.onPause();
-    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,24 +42,12 @@ public class MainActivity extends AppCompatActivity {
         mensaje2 = (TextView) findViewById(R.id.mensaje_id2);
         mensaje3 = (TextView) findViewById(R.id.txt_info);
 
-        //mView = (MapView) findViewById(R.id.mView2);
-        //
-        // mView.onCreate(savedInstanceState);
-
-        //googleMap = mView.getMap();
-        /*mView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(GoogleMap googleMap) { } });*/
-        //googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        //googleMap.setMyLocationEnabled(true);
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,}, 1000);
         } else {
             locationStart();
         }
 
-        //mView.setActivated(true);
     }
 
     private void locationStart() {
